@@ -40,7 +40,7 @@ li:hover{
 }
 
 .header{
-    z-index: 9999;
+    z-index: 9998;
     box-shadow: 0 2px 6px black ;
     transition: transform 0.3s ease-in-out;
     background-color: #000621;

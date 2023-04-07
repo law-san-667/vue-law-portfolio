@@ -14,7 +14,7 @@
       <div style="height: 2px;width: 60%;background-color: red;" class="mt-16 ml-32" ></div>
     </div>
     <div class="h-screen w-full section scroll-section" id="projects">
-      <Projects/>
+      <Projects @toggle-modal="toggleModal"/>
       <div style="height: 2px;width: 60%;background-color: red;" class="mt-16 ml-32" ></div>
     </div>
     <div class="h-screen w-full flex flex-col justify-end gap-24 section scroll-section" id="contact">
@@ -22,6 +22,7 @@
       <Footer/>
     </div>
 
+    <Modal @hide-modal="hideModal" :image="image"/>
 
 </template>
 
@@ -34,7 +35,7 @@
   import Contact from './components/Contact.vue'
   import Projects from './components/Projects.vue'
   import Footer from './components/Footer.vue'
-
+  import Modal from './components/Modal.vue'
 
   export default {
     name: 'App',
@@ -45,8 +46,27 @@
       About,
       Contact,
       Projects,
-      Footer
+      Footer,
+      Modal
+    },
+    data(){
+      return{
+        image: '/src/assets/imgs/no_image.png'
+      }
+    },
+    methods:{
+      toggleModal(imageUrl){
+        const modal = document.querySelector('.modal');
+        modal.style.display = 'block';
+        let img = document.querySelector('#modal-image');
+        img.src = imageUrl+'';
+      },
+      hideModal(){
+        const modal = document.querySelector('.modal');
+        modal.style.display = 'none';
+      }
     }
+
   }
 
 </script>
@@ -56,5 +76,8 @@
   max-width: none!important;
   margin: 0!important;
 }*/
+
+
+
 
 </style>

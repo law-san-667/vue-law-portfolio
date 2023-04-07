@@ -4,10 +4,15 @@
             <Title location="projects" />
         </div>
         <div class="h-5/6 w-full flex mt-12" data-aos="fade-right">
-            <div class="h-full  w-full flex justify-center items-center pl-16">
-                <div @click="previousProject" id="left" class="slider flex items-center justify-center text-white h-32 w-24">&lt;</div>
-                <Project :project="displayedProject" />
-                <div @click="nextProject" id="right" class="slider flex items-center justify-center text-white h-32 w-24">></div>
+            <div class="h-full w-full flex justify-center items-center pl-16">
+                <div @click="previousProject" id="left"
+                    class="slider flex items-center justify-start text-white h-32 w-32">&lt;</div>
+                <Project :project="displayedProject" :images="displayedProject.images" :index=index
+                @toggle-modal="emitToggleModal" @change-image-right="changeImageRight" 
+                @change-image-left="changeImageLeft" />
+
+                <div @click="nextProject" id="right" class="slider flex items-center justify-center text-white h-32 w-24">>
+                </div>
             </div>
             <div class="h-full flex justify-end">
             </div>
@@ -34,7 +39,11 @@ export default {
                     name: "SchoolUp",
                     description: `Another colaborative project. This is a school management app that I made with Java SE and JavaFX. It's a desktop app that allows you to manage students, classes, courses, etc...\n
                     I worked on the backend and my two associates worked on the frontend and files managements`,
-                    image: "/src/assets/imgs/projects/schoolup.png",
+                    images: [
+                        "/src/assets/imgs/projects/schoolup1.png",
+                        "/src/assets/imgs/projects/schoolup2.png",
+                        "/src/assets/imgs/projects/schoolup3.png",
+                    ],
                     link: "https://github.com/azimari-toure-ikbal/projet-java-gestion-scolarite"
                 },
 
@@ -42,42 +51,61 @@ export default {
                     id: 1,
                     name: "flutter-law-gpt",
                     description: "This is a mobile app that uses OpenAi API to implement chat functionality with different models that we can choose.",
-                    image: "/src/assets/imgs/projects/flutter_gpt.png",
+                    images: [
+                        "/src/assets/imgs/projects/law_gpt.png",
+                    ],
                     link: "https://github.com/law-san-667/flutter-law-gpt"
                 },
                 {
                     id: 2,
                     name: "Lawmine shop",
                     description: "An App with laravel to manage products (yeah basically it's like a todolist but with products).<br>This is a collaborative project, I worked on the backend with laravel and my friend worked on the frontend with Tailwind.",
-                    image: "/src/assets/imgs/projects/laravel_products.png",
+                    images: [
+                        "/src/assets/imgs/projects/lawmine.png",
+                        "/src/assets/imgs/projects/lawmine2.png",
+                        "/src/assets/imgs/projects/lawmine3.png"
+                    ],
                     link: "https://github.com/law-san-667/gestion-produits-laravel"
                 },
                 {
                     id: 3,
                     name: "Plant App",
                     description: "This is an app of presentation of some plant in order to buy them. There is no back so actually you can't really buy anything haha.<br>That for me a good way to learn Flutter basics.",
-                    image: "/src/assets/imgs/projects/plant_app.png",
+                    images: [
+                        "/src/assets/imgs/projects/plant_app1.png",
+                        "/src/assets/imgs/projects/plant_app2.png"
+                    ],
                     link: "https://github.com/law-san-667/flutter-plant-app"
                 },
                 {
                     id: 4,
                     name: "Booking Law",
                     description: "This is a flight booking app with admin, users & companies interfaces made with PHP.<br>Really cool.",
-                    image: "/src/assets/imgs/projects/booking1.png",
+                    images: [
+                        "/src/assets/imgs/projects/booking.png",
+                        "/src/assets/imgs/projects/booking2.png",
+                        "/src/assets/imgs/projects/booking3.png"
+                    ],
                     link: "https://github.com/law-san-667/php-booking-flight-app"
                 },
                 {
                     id: 5,
                     name: "Vue task tracker",
                     description: "This is a basic task tracker made with VueJS and tailwind. Json server was used for the \"back-end\".",
-                    image: "/src/assets/imgs/projects/vue_task_tracker.png",
+                    images: [
+                        "/src/assets/imgs/projects/vue_todo.png",
+                        "/src/assets/imgs/projects/vue_todo2.png"
+                    ],
                     link: "https://github.com/law-san-667/vue-task-tracker"
                 },
                 {
                     id: 6,
                     name: "Angular todo-list",
                     description: "This is a todo-list app made with Angular & Bootstrap. It's a simple app that allows you once you are logged in to add, delete, update and mark as done your tasks.<br>I used JSON server to simulate a backend.",
-                    image: "/src/assets/imgs/projects/angular-todolist.png",
+                    images: [
+                        "/src/assets/imgs/projects/ng_todo1.png",
+                        "/src/assets/imgs/projects/ng_todo2.png",
+                    ],
                     link: "https://github.com/law-san-667/angular-todolist-app"
                 },
 
@@ -86,25 +114,73 @@ export default {
                 id: 0,
                 name: "SchoolUp",
                 description: "Another colaborative project. This is a school management app that I made with Java SE and JavaFX. It's a desktop app that allows you to manage students, classes, courses, etc...<br>I worked on the backend and my two associates worked on the frontend and files managements",
-                image: "/src/assets/imgs/projects/schoolup.png",
+                images: [
+                        "/src/assets/imgs/projects/schoolup1.png",
+                        "/src/assets/imgs/projects/schoolup2.png",
+                        "/src/assets/imgs/projects/schoolup3.png",
+                    ],
                 link: "https://github.com/azimari-toure-ikbal/projet-java-gestion-scolarite"
             },
+            images: [
+                        "/src/assets/imgs/projects/schoolup1.png",
+                        "/src/assets/imgs/projects/schoolup2.png",
+                        "/src/assets/imgs/projects/schoolup3.png",
+                    ],
+            index: 0
         }
     },
     methods: {
         nextProject() {
-            if (this.displayedProject.id < this.projects.length - 1) {
-                this.displayedProject = this.projects[this.displayedProject.id + 1];
-            } else {
-                this.displayedProject = this.projects[0]
-            }
+            let project_section = document.querySelector(".project");
+            project_section.classList.add("animate__animated", "animate__fadeOutLeft");
+
+            setTimeout(() => {
+                if (this.displayedProject.id < this.projects.length - 1) {
+                    this.displayedProject = this.projects[this.displayedProject.id + 1];
+                } else {
+                    this.displayedProject = this.projects[0];
+                }
+                this.images = this.displayedProject.images;
+                this.index = 0;
+                setTimeout(() => {
+                    project_section.classList.remove("animate__animated", "animate__fadeOutLeft");
+                }, 500);
+            }, 300);
         },
         previousProject() {
-            if (this.displayedProject.id > 0) {
-                this.displayedProject = this.projects[this.displayedProject.id - 1]
+            let project_section = document.querySelector(".project");
+            project_section.classList.add("animate__animated", "animate__fadeOutRight");
+            
+            setTimeout(() => {
+                if (this.displayedProject.id > 0) {
+                    this.displayedProject = this.projects[this.displayedProject.id - 1];
+                } else {
+                    this.displayedProject = this.projects[this.projects.length - 1];
+                }
+                this.images = this.displayedProject.images;
+                this.index = 0;
+
+                setTimeout(() => {
+                    project_section.classList.remove("animate__animated", "animate__fadeOutRight");
+                }, 500);
+            }, 300);
+        },
+        changeImageLeft(index){
+            if(index == this.images.length - 1){
+                this.index = 0;
             } else {
-                this.displayedProject = this.projects[this.projects.length - 1]
+                this.index = index + 1;
             }
+        },
+        changeImageRight(index){
+            if(index == 0){
+                this.index = this.images.length - 1;
+            } else {
+                this.index = index - 1;
+            }
+        },
+        emitToggleModal(imageUrl){
+            this.$emit("toggle-modal", imageUrl);
         }
     }
 
@@ -115,7 +191,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
 .slider {
     font-size: 5vw;
 }
@@ -129,4 +205,61 @@ export default {
     cursor: pointer;
     transform: translateX(-10px);
 }
+
+.animate__animated {
+    animation-duration: 0.9s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeOutLeft {
+    animation-name: fadeOutLeft;
+}
+
+@keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+    
+    60% {
+        opacity: 0;
+        transform: translate3d(200%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0%, 0, 0);
+    }
+
+}
+
+.animate__fadeOutRight {
+    animation-name: fadeOutRight;
+}
+
+@keyframes fadeOutRight {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+
+    60% {
+        opacity: 0;
+        transform: translate3d(-200%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0%, 0, 0);
+    }
+}
 </style>
+
+
