@@ -20,7 +20,7 @@
     </div>
 
     <div style="position:absolute; display: none;" >
-        <img src="../assets/schoolup1.png" alt="">
+        <img src="src/assets/schoolup2.png" alt="">
         <img src="../assets/schoolup2.png" alt="">
         <img src="../assets/schoolup3.png" alt="">
         <img src="../assets/law_gpt.png" alt="">
@@ -50,6 +50,7 @@ export default {
         Title,
         Project
     },
+    
     data() {
         return {
             projects: [
