@@ -18,6 +18,25 @@
             </div>
         </div>
     </div>
+
+    <div style="position:absolute; display: none;" >
+        <img src="../assets/imgs/schoolup1.png" alt="">
+        <img src="../assets/imgs/schoolup2.png" alt="">
+        <img src="../assets/imgs/schoolup3.png" alt="">
+        <img src="../assets/imgs/law_gpt.png" alt="">
+        <img src="../assets/imgs/lawmine.png" alt="">
+        <img src="../assets/imgs/lawmine2.png" alt="">
+        <img src="../assets/imgs/lawmine3.png" alt="">
+        <img src="../assets/imgs/plant_app1.png" alt="">
+        <img src="../assets/imgs/plant_app2.png" alt="">
+        <img src="../assets/imgs/booking.png" alt="">
+        <img src="../assets/imgs/booking2.png" alt="">
+        <img src="../assets/imgs/booking3.png" alt="">
+        <img src="../assets/imgs/vue_todo.png" alt="">
+        <img src="../assets/imgs/vue_todo2.png" alt="">
+        <img src="../assets/imgs/ng_todo1.png" alt="">
+        <img src="../assets/imgs/ng_todo2.png" alt="">
+    </div>
 </template>
 
 <script>

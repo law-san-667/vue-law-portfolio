@@ -8,7 +8,9 @@
             </div>
         </div>
         <div class="flex flex-col justify-center h-full w-1/2"> 
-            <div class="w-full h-1/4 text-blue-500 pl-16" style="font-size: 3vw;">{{ project.name }} </div>
+            <div class="w-full h-1/4 text-blue-500 pl-16" style="font-size: 3vw;">
+                <a :href="project.link" class="hover:underline" > {{ project.name }} </a>
+            </div>
             <div class="w-full h-1/2 pl-32 text-red-500 w-11/12" id="des" style="font-size: 1.2vw;"
                 v-html="project.description">
             </div>
