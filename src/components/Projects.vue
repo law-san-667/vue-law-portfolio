@@ -20,22 +20,22 @@
     </div>
 
     <div style="position:absolute; display: none;" >
-        <img src="assets/schoolup1.png" alt="">
-        <img src="../assets/schoolup2.png" alt="">
-        <img src="../assets/schoolup3.png" alt="">
-        <img src="../assets/law_gpt.png" alt="">
-        <img src="../assets/lawmine.png" alt="">
-        <img src="../assets/lawmine2.png" alt="">
-        <img src="../assets/lawmine3.png" alt="">
-        <img src="../assets/plant_app1.png" alt="">
-        <img src="../assets/plant_app2.png" alt="">
-        <img src="../assets/booking.png" alt="">
-        <img src="../assets/booking2.png" alt="">
-        <img src="../assets/booking3.png" alt="">
-        <img src="../assets/vue_todo.png" alt="">
-        <img src="../assets/vue_todo2.png" alt="">
-        <img src="../assets/ng_todo1.png" alt="">
-        <img src="../assets/ng_todo2.png" alt="">
+        <img src="/src/assets/schoolup1.png" alt="">
+        <img src="/src/assets/schoolup2.png" alt="">
+        <img src="/src/assets/schoolup3.png" alt="">
+        <img src="/src/assets/law_gpt.png" alt="">
+        <img src="/src/assets/lawmine.png" alt="">
+        <img src="/src/assets/lawmine2.png" alt="">
+        <img src="/src/assets/lawmine3.png" alt="">
+        <img src="/src/assets/plant_app1.png" alt="">
+        <img src="/src/assets/plant_app2.png" alt="">
+        <img src="/src/assets/booking.png" alt="">
+        <img src="/src/assets/booking2.png" alt="">
+        <img src="/src/assets/booking3.png" alt="">
+        <img src="/src/assets/vue_todo.png" alt="">
+        <img src="/src/assets/vue_todo2.png" alt="">
+        <img src="/src/assets/ng_todo1.png" alt="">
+        <img src="/src/assets/ng_todo2.png" alt="">
     </div>
 </template>
 
@@ -60,9 +60,9 @@ export default {
                     description: `Another colaborative project. This is a school management app that I made with Java SE and JavaFX. It's a desktop app that allows you to manage students, classes, courses, etc...\n
                     I worked on the backend and my two associates worked on the frontend and files managements`,
                     images: [
-                        "../assets/schoolup1.png",
-                        "../assets/schoolup2.png",
-                        "../assets/schoolup3.png",
+                        "/src/assets/schoolup1.png",
+                        "/src/assets/schoolup2.png",
+                        "/src/assets/schoolup3.png",
                     ],
                     link: "https://github.com/azimari-toure-ikbal/projet-java-gestion-scolarite"
                 },
@@ -72,7 +72,7 @@ export default {
                     name: "flutter-law-gpt",
                     description: "This is a mobile app that uses OpenAi API to implement chat functionality with different models that we can choose.",
                     images: [
-                        "../assets/law_gpt.png",
+                        "/src/assets/law_gpt.png",
                     ],
                     link: "https://github.com/law-san-667/flutter-law-gpt"
                 },
@@ -81,9 +81,9 @@ export default {
                     name: "Lawmine shop",
                     description: "An App with laravel to manage products (yeah basically it's like a todolist but with products).<br>This is a collaborative project, I worked on the backend with laravel and my friend worked on the frontend with Tailwind.",
                     images: [
-                        "../assets/lawmine.png",
-                        "../assets/lawmine2.png",
-                        "../assets/lawmine3.png"
+                        "/src/assets/lawmine.png",
+                        "/src/assets/lawmine2.png",
+                        "/src/assets/lawmine3.png"
                     ],
                     link: "https://github.com/law-san-667/gestion-produits-laravel"
                 },
@@ -92,8 +92,8 @@ export default {
                     name: "Plant App",
                     description: "This is an app of presentation of some plant in order to buy them. There is no back so actually you can't really buy anything haha.<br>That for me a good way to learn Flutter basics.",
                     images: [
-                        "../assets/plant_app1.png",
-                        "../assets/plant_app2.png"
+                        "/src/assets/plant_app1.png",
+                        "/src/assets/plant_app2.png"
                     ],
                     link: "https://github.com/law-san-667/flutter-plant-app"
                 },
@@ -102,9 +102,9 @@ export default {
                     name: "Booking Law",
                     description: "This is a flight booking app with admin, users & companies interfaces made with PHP.<br>Really cool.",
                     images: [
-                        "../assets/booking.png",
-                        "../assets/booking2.png",
-                        "../assets/booking3.png"
+                        "/src/assets/booking.png",
+                        "/src/assets/booking2.png",
+                        "/src/assets/booking3.png"
                     ],
                     link: "https://github.com/law-san-667/php-booking-flight-app"
                 },
@@ -113,8 +113,8 @@ export default {
                     name: "Vue task tracker",
                     description: "This is a basic task tracker made with VueJS and tailwind. Json server was used for the \"back-end\".",
                     images: [
-                        "../assets/vue_todo.png",
-                        "../assets/vue_todo2.png"
+                        "/src/assets/vue_todo.png",
+                        "/src/assets/vue_todo2.png"
                     ],
                     link: "https://github.com/law-san-667/vue-task-tracker"
                 },
@@ -123,8 +123,8 @@ export default {
                     name: "Angular todo-list",
                     description: "This is a todo-list app made with Angular & Bootstrap. It's a simple app that allows you once you are logged in to add, delete, update and mark as done your tasks.<br>I used JSON server to simulate a backend.",
                     images: [
-                        "../assets/ng_todo1.png",
-                        "../assets/ng_todo2.png",
+                        "/src/assets/ng_todo1.png",
+                        "/src/assets/ng_todo2.png",
                     ],
                     link: "https://github.com/law-san-667/angular-todolist-app"
                 },
@@ -135,16 +135,16 @@ export default {
                 name: "SchoolUp",
                 description: "Another colaborative project. This is a school management app that I made with Java SE and JavaFX. It's a desktop app that allows you to manage students, classes, courses, etc...<br>I worked on the backend and my two associates worked on the frontend and files managements",
                 images: [
-                        "../assets/schoolup1.png",
-                        "../assets/schoolup2.png",
-                        "../assets/schoolup3.png",
+                        "/src/assets/schoolup1.png",
+                        "/src/assets/schoolup2.png",
+                        "/src/assets/schoolup3.png",
                     ],
                 link: "https://github.com/azimari-toure-ikbal/projet-java-gestion-scolarite"
             },
             images: [
-                        "../assets/schoolup1.png",
-                        "../assets/schoolup2.png",
-                        "../assets/schoolup3.png",
+                        "/src/assets/schoolup1.png",
+                        "/src/assets/schoolup2.png",
+                        "/src/assets/schoolup3.png",
                     ],
             index: 0
         }
