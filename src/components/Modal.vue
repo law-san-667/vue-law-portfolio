@@ -3,7 +3,7 @@
 <div class="modal">
       <div class="absolute top-8 right-10 text-white text-4xl hover:cursor-pointer" @click="hideModal">X</div>
         <div class="modal-content">
-          <img src="/src/assets/imgs/no_image.png" id="modal-image" class="w-full" alt="">
+          <img src="/src/assets/no_image.png" id="modal-image" class="w-full" alt="">
         </div>
     </div>
 

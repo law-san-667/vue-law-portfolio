@@ -20,22 +20,22 @@
     </div>
 
     <div style="position:absolute; display: none;" >
-        <img src="../assets/imgs/schoolup1.png" alt="">
-        <img src="../assets/imgs/schoolup2.png" alt="">
-        <img src="../assets/imgs/schoolup3.png" alt="">
-        <img src="../assets/imgs/law_gpt.png" alt="">
-        <img src="../assets/imgs/lawmine.png" alt="">
-        <img src="../assets/imgs/lawmine2.png" alt="">
-        <img src="../assets/imgs/lawmine3.png" alt="">
-        <img src="../assets/imgs/plant_app1.png" alt="">
-        <img src="../assets/imgs/plant_app2.png" alt="">
-        <img src="../assets/imgs/booking.png" alt="">
-        <img src="../assets/imgs/booking2.png" alt="">
-        <img src="../assets/imgs/booking3.png" alt="">
-        <img src="../assets/imgs/vue_todo.png" alt="">
-        <img src="../assets/imgs/vue_todo2.png" alt="">
-        <img src="../assets/imgs/ng_todo1.png" alt="">
-        <img src="../assets/imgs/ng_todo2.png" alt="">
+        <img src="/src/assets/schoolup1.png" alt="">
+        <img src="/src/assets/schoolup2.png" alt="">
+        <img src="/src/assets/schoolup3.png" alt="">
+        <img src="/src/assets/law_gpt.png" alt="">
+        <img src="/src/assets/lawmine.png" alt="">
+        <img src="/src/assets/lawmine2.png" alt="">
+        <img src="/src/assets/lawmine3.png" alt="">
+        <img src="/src/assets/plant_app1.png" alt="">
+        <img src="/src/assets/plant_app2.png" alt="">
+        <img src="/src/assets/booking.png" alt="">
+        <img src="/src/assets/booking2.png" alt="">
+        <img src="/src/assets/booking3.png" alt="">
+        <img src="/src/assets/vue_todo.png" alt="">
+        <img src="/src/assets/vue_todo2.png" alt="">
+        <img src="/src/assets/ng_todo1.png" alt="">
+        <img src="/src/assets/ng_todo2.png" alt="">
     </div>
 </template>
 
@@ -59,7 +59,7 @@ export default {
                     description: `Another colaborative project. This is a school management app that I made with Java SE and JavaFX. It's a desktop app that allows you to manage students, classes, courses, etc...\n
                     I worked on the backend and my two associates worked on the frontend and files managements`,
                     images: [
-                        "../assets/schoolup1.png",
+                        "/src/assets/schoolup1.png",
                         "/src/assets/schoolup2.png",
                         "/src/assets/schoolup3.png",
                     ],
