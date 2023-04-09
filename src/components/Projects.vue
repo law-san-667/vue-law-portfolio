@@ -20,22 +20,22 @@
     </div>
 
     <div style="position:absolute; display: none;" >
-        <img src="/src/assets/schoolup1.png" alt="">
-        <img src="/src/assets/schoolup2.png" alt="">
-        <img src="/src/assets/schoolup3.png" alt="">
-        <img src="/src/assets/law_gpt.png" alt="">
-        <img src="/src/assets/lawmine.png" alt="">
-        <img src="/src/assets/lawmine2.png" alt="">
-        <img src="/src/assets/lawmine3.png" alt="">
-        <img src="/src/assets/plant_app1.png" alt="">
-        <img src="/src/assets/plant_app2.png" alt="">
-        <img src="/src/assets/booking.png" alt="">
-        <img src="/src/assets/booking2.png" alt="">
-        <img src="/src/assets/booking3.png" alt="">
-        <img src="/src/assets/vue_todo.png" alt="">
-        <img src="/src/assets/vue_todo2.png" alt="">
-        <img src="/src/assets/ng_todo1.png" alt="">
-        <img src="/src/assets/ng_todo2.png" alt="">
+        <img src="../assets/schoolup1.png" alt="">
+        <img src="../assets/schoolup2.png" alt="">
+        <img src="../assets/schoolup3.png" alt="">
+        <img src="../assets/law_gpt.png" alt="">
+        <img src="../assets/lawmine.png" alt="">
+        <img src="../assets/lawmine2.png" alt="">
+        <img src="../assets/lawmine3.png" alt="">
+        <img src="../assets/plant_app1.png" alt="">
+        <img src="../assets/plant_app2.png" alt="">
+        <img src="../assets/booking.png" alt="">
+        <img src="../assets/booking2.png" alt="">
+        <img src="../assets/booking3.png" alt="">
+        <img src="../assets/vue_todo.png" alt="">
+        <img src="../assets/vue_todo2.png" alt="">
+        <img src="../assets/ng_todo1.png" alt="">
+        <img src="../assets/ng_todo2.png" alt="">
     </div>
 </template>
 
