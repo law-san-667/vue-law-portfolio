@@ -19,9 +19,9 @@
                     and stacking skills."
                 </span>
             </div>
-            <div class="h-full flex justify-end">
+            <div class="h-full flex justify-center">
                 <!--display programming.svg from assets/-->
-                <img src="../assets/profile.svg" alt="programming" class="pl-32 h-full">
+                <img src="../assets/profile.svg" alt="programming" id="info" class="w-3/4 h-full">
             </div>
         </div>
     </div>
@@ -39,3 +39,14 @@ export default {
 }
     
 </script>
+
+<style scoped>
+
+@media only screen and (max-width: 950px) {
+    #info{
+        width: 50%;
+        height: 50%;
+    }
+  }
+
+</style>

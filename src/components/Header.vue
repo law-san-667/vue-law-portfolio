@@ -2,8 +2,8 @@
 </script>
 
 <template>
-    <div class="header h-20 w-full flex items-center justify-end fixed top-0 left-0 right-0 font-bold text-gray-400">
-        <ul class="w-1/3 flex justify-between items-center pr-20 text-lg">
+    <div class="header h-20 w-screen flex items-center justify-end fixed top-0 left-0 right-0 font-bold text-gray-400">
+        <ul class="w-1/3 flex justify-between items-center mr-28 text-lg">
             <li class="inline-block mr-4">
                 <a href="#home">home()</a>
             </li>

@@ -8,7 +8,7 @@
                 <span class="text-blue-500" style="font-size: 4vw;" >
                     Get in touch !
                 </span>
-                <span class="text-white text-2xl w-3/5 mt-12">
+                <span class="text-white text-2xl w-4/5 mt-12">
                     "Although I’m currently looking for any new opportunities, my inbox is always open.\n <br> Whether you have a question or just want to say hi, I’ll try my best to get back to you!"
                 </span>
             </div>

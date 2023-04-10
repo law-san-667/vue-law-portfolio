@@ -1,5 +1,5 @@
 <template>
-    <div data-aos="fade-left" class="bg-red-800 rounded-3xl w-14 flex flex-col items-center justify-between h-56 pt-4 pb-4 fixed top-1/3 right-3">
+    <div data-aos="fade-left" class="bg-red-800 rounded-l-3xl w-14 flex flex-col items-center justify-between h-56 pt-4 pb-4 fixed top-1/3 right-0">
       <div>
         <!--display github.svg from assets/-->
         <a href="https://github.com/law-san-667">
@@ -42,6 +42,15 @@ img:hover{
   height: 2rem; */
   transform: translateX(-5px);
 }
+
+@media only screen and (max-width: 1000px) {
+    .home{
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+        height: 100%;
+    }
+  }
 
 
 
