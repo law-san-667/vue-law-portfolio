@@ -5,11 +5,11 @@
         </div>
         <div class="h-5/6 w-full flex mt-12" data-aos="fade-right">
             <div class="h-full w-full flex justify-center items-center pl-16">
-                <div @click="previousProject" id="left"
-                    class="slider flex items-center justify-start text-white h-32 w-32">&lt;</div>
+                <div @click="previousProject" id="left" class="slider flex items-center justify-start text-white h-32 w-32">
+                    &lt;</div>
                 <Project :project="displayedProject" :images="displayedProject.images" :index=index
-                @toggle-modal="emitToggleModal" @change-image-right="changeImageRight" 
-                @change-image-left="changeImageLeft" />
+                    @toggle-modal="emitToggleModal" @change-image-right="changeImageRight"
+                    @change-image-left="changeImageLeft" />
 
                 <div @click="nextProject" id="right" class="slider flex items-center justify-center text-white h-32 w-24">>
                 </div>
@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <div style="position:absolute; display: none;" >
+    <div style="position:absolute; display: none;">
         <img src="../assets/schoolup1.png" alt="">
         <img src="../assets/schoolup2.png" alt="">
         <img src="../assets/schoolup3.png" alt="">
@@ -50,7 +50,7 @@ export default {
         Title,
         Project
     },
-    
+
     data() {
         return {
             projects: [
@@ -130,26 +130,19 @@ export default {
                 },
 
             ],
-            displayedProject: {
-                id: 0,
-                name: "SchoolUp",
-                description: "Another colaborative project. This is a school management app that I made with Java SE and JavaFX. It's a desktop app that allows you to manage students, classes, courses, etc...<br>I worked on the backend and my two associates worked on the frontend and files managements",
-                images: [
-                        "../assets/schoolup1-e88827bd.png",
-                        "../assets/schoolup2-3adf6ec1.png",
-                        "../assets/schoolup3-91c8eb67.png",
-                    ],
-                link: "https://github.com/azimari-toure-ikbal/projet-java-gestion-scolarite"
-            },
-            images: [
-                        "../assets/schoolup1-e88827bd.png",
-                        "../assets/schoolup2-3adf6ec1.png",
-                        "../assets/schoolup3-91c8eb67.png",
-                    ],
-            index: 0
+            index: 0,
+            displayedProject: {},
+            images: []
         }
     },
+    created() {
+        this.setDisplayedProject(this.projects[0])
+    },
     methods: {
+        setDisplayedProject(project) {
+            this.displayedProject = project
+            this.images = project.images
+        },
         nextProject() {
             let project_section = document.querySelector(".project");
             project_section.classList.add("animate__animated", "animate__fadeOutLeft");
@@ -170,7 +163,7 @@ export default {
         previousProject() {
             let project_section = document.querySelector(".project");
             project_section.classList.add("animate__animated", "animate__fadeOutRight");
-            
+
             setTimeout(() => {
                 if (this.displayedProject.id > 0) {
                     this.displayedProject = this.projects[this.displayedProject.id - 1];
@@ -185,23 +178,23 @@ export default {
                 }, 500);
             }, 300);
         },
-        changeImageLeft(index){
-            if(index == this.images.length - 1){
+        changeImageLeft(index) {
+            if (index == this.images.length - 1) {
                 this.index = 0;
             } else {
                 this.index = index + 1;
             }
         },
-        changeImageRight(index){
-            if(index == 0){
+        changeImageRight(index) {
+            if (index == 0) {
                 this.index = this.images.length - 1;
             } else {
                 this.index = index - 1;
             }
         },
-        emitToggleModal(imageUrl){
+        emitToggleModal(imageUrl) {
             this.$emit("toggle-modal", imageUrl);
-        }
+        },
     }
 
 }
@@ -244,11 +237,12 @@ export default {
         opacity: 0;
         transform: translate3d(-100%, 0, 0);
     }
-    
+
     60% {
         opacity: 0;
         transform: translate3d(200%, 0, 0);
     }
+
     100% {
         opacity: 1;
         transform: translate3d(0%, 0, 0);
