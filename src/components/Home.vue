@@ -4,10 +4,12 @@
             <Title location="home" />
         </div>
         <div class="h-5/6 w-full flex mt-12 ">
-            <div class="h-full w-4/6 flex flex-col pl-16">
+            <div class="h-full w-60/6 flex flex-col pl-16">
                 <span class="text-red-800 font-bold text-2xl">Hello, my name is</span>
-                <span class="text-white w-full" id="text" style="font-size: 4.5vw;" >
-                    <span id="cursor" class="text-white h-96 w-full flex pt-16 flex-col justify-start" >█</span>
+                <span class="text-white w-1/2" id="text" style="font-size: 4.5vw;" >
+                    <span id="cursor" class="text-white h-96 w-3/
+                
+                    flex pt-16 flex-col justify-start" >█</span>
                 </span>     
                 <span class="text-xl text-blue-400">console.log("I'm a web & mobile full stack developer.");</span>
             </div>

@@ -7,7 +7,9 @@
       Sorry, your screen is too small to display this content<br>
     😥
     <br>
-    Try to open it on your laptop, desktop or just something bigger ^^
+    Try to open it on your laptop.
+    <br>
+    We are currently working on the mobile version^^
 
     </p>
   </div>
@@ -106,9 +108,12 @@ export default {
 }
 
 #message p{
-  height: fit-content;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  margin-top: 50%;
+  margin-top: 70%;
   transform: translateY(-50%);
 }
 
