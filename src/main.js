@@ -23,26 +23,30 @@ console.log("I'm a web & mobile full stack developer.");
 console.log("Click on 'Law' in the footer");
 
 //text animation
-const textElement = document.getElementById('text');
+const textElement = document.getElementById('first_name');
+
 const cursorElement = document.getElementById('cursor');
-const text = 'Mouhamed Lawal DAN AZOUMI';
-let index = 0;
+
+const first_name = 'Mouhamed Lawal DAN AZOUMI';
+
+let index1 = 0;
 
 function displayText() {
-  if (index < text.length) {
+  if (index1 < first_name.length) {
     textElement.removeChild(cursorElement);
-    textElement.textContent += text.charAt(index);
+    textElement.textContent += first_name.charAt(index1);
     textElement.appendChild(cursorElement);
-    index++;
+    index1++;
     setTimeout(displayText, 100); // Change this value to adjust the speed
   } else {
     cursorElement.style.display = 'inline';
   }
 }
-
 displayText();
 
-//scroll reveal
+
+
+displayText();
 
 const sections = document.querySelectorAll('.scroll-section');
 
