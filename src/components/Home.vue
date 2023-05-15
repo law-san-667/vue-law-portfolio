@@ -1,12 +1,12 @@
 <template>
     <div class=" w-10/12 h-4/6 mt-24 ml-28 flex flex-col items-start home" >
-        <div class="h-2 w-1/4 text-red-500 text-2xl font-bold" style="font-size: 2vw;">
+        <div class="h-10 w-1/4 text-red-500 text-2xl font-bold" style="font-size: 2vw;">
             <Title location="home" />
         </div>
         <div class="h-full w-full flex mt-12 ">
             <div class="h-full w-4/6 flex flex-col pl-16">
                 <span class="text-red-800 h-1/6 font-bold text-xl">Hello, my name is</span>
-                <span class="text-white w-5/6 h-3/6" id="first_name" style="font-size: 4vw;" >
+                <span class="text-white w-5/6 h-4/6" id="first_name" style="font-size: 4vw;" >
                     <span id="cursor" class="text-white h-full w-3/
                 
                     flex pt-16 flex-col justify-start" >█</span>
